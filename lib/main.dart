@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'screens/home/home_screen.dart';
 
 void main() {
@@ -13,6 +14,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'إدارة المحروقات',
+
+      // ✅ دعم اللغات
+      supportedLocales: [
+        Locale('ar'),
+        Locale('en'),
+      ],
+
+      // ✅ تفعيل الترجمة والاتجاه
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.blue,
@@ -22,6 +37,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+
       home: const Home(),
     );
   }
