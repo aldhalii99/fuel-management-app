@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       title: 'إدارة المحروقات',
 
       // ✅ دعم اللغات
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: const Home(),
+      home: const HomeScreen(),
     );
   }
 }
